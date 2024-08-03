@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="in">
+    <head>
+        <title>Array JS</title>
+        <style>
+            #ambil {
+                background: blue;
+                color: white;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ambil"></div>
+
+        <script>
+            //tipe data array
+            // array dimulai dai angka 0
+            // var kotak = ["kevin", 11, "amelia"];
+            //
+            // document.getElementById("ambil").innerHTML = kotak[1];
+
+            //metode array
+            //sort, reverse, concat, length, join("separator")
+            var namaHewan = ["kucing", "jerapah", "ayam", "bebek", "kampret"];
+            var namaHewan2 = ["badak", "gajah", "kodok"];
+            var namaHewan3 = ["lalat", "ular"];
+
+            //sort
+            //document.getElementById("ambil").innerHTML = namaHewan.sort();
+
+            //reverse
+            //document.getElementById("ambil").innerHTML = namaHewan.reverse();
+
+            //concat
+            //document.getElementById("ambil").innerHTML = namaHewan.concat(namaHewan2, namaHewan3);
+
+            //length
+            //document.getElementById("ambil").innerHTML =
+            //join("separator")
+            //document.getElementById("ambil").innerHTML = namaHewan.join(" ? ");
+
+            //--------metode array bagian 2------
+            //splice->add(mulai, dihapus?, isi), splice->remove
+            //pop, push, shift, unshift()
+
+            //splice
+            //namaHewan.splice(2, 0, "semut");
+            //namaHewan.splice(2, 1);
+
+            //pop, push
+            //namaHewan.pop();
+            //namaHewan.push("beruang");
+            //namaHewan.shift();
+            namaHewan.unshift("zebra");
+
+            document.getElementById("ambil").innerHTML = namaHewan;
+        </script>
+    </body>
+</html>

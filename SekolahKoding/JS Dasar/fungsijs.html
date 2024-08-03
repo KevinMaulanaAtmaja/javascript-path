@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="in">
+  <head>
+    <title>Fungsi JS</title>
+    <style>
+      #ambil{
+        background: green;
+        color: white;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ambil"></div>
+
+  <script>
+    // Fungsi
+
+    // menuliskan fungsi
+    /*function printText(){
+      var x = "belajar JS";
+      document.getElementById("ambil").innerHTML = x;
+    }
+
+    // memanggil fungsi
+    printText();*/
+
+
+    //(1)parameter pada Fungsi
+    /*function printText(nama)
+    {
+      var text = nama + " aisyah";
+      document.getElementById("ambil").innerHTML = text;
+    }
+    var nama = "amelia";
+    printText(nama);*/
+
+    //(2)multiple parameter
+    /*function printText(nama_depan, nama_tengah, nama_belakang)
+    {
+      var text = nama_depan + nama_tengah + nama_belakang;
+      document.getElementById("ambil").innerHTML = text;
+    }
+
+    printText("amelia", " aisyah", " putri");*/
+
+
+    //(3)return
+    //1
+    /*function printText(){
+      return "kevin";
+    }
+
+    printText();
+    document.getElementById("ambil").innerHTML = printText();*/
+
+
+    //2
+    /*function penjumlahan(){
+      var a = 10;
+      var b = 20;
+
+      return a + b;
+    }
+
+    var angka = penjumlahan() + 20;
+    document.getElementById("ambil").innerHTML = angka;*/
+
+
+    //3
+    /*function modulo(angka1, angka2){
+      return angka1 % angka2;
+    }
+
+    var angka = modulo(2022, 16);
+    document.getElementById("ambil").innerHTML = angka;*/
+
+    //(4)scope
+    // global var & local variabel
+
+    //global
+    var text = "Global var";
+
+    function printText(){
+      // local
+      var text2 = "Local var"
+      document.getElementById("ambil").innerHTML = text;
+    }
+
+    printText();
+
+  </script>
+  </body>
+</html>
