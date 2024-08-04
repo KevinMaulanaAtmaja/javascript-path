@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event di JS DOM</title>
+    <style>
+        .merah{
+            background: rgb(245, 65, 65);
+        }
+        .hitam{
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body onload="alert('sudah berhasil :b')">
+    <h1>Event JS DOM</h1>
+    <img onclick="berubah()" src="muehehe2.png" width="200" id="gambar" >
+
+    <input type="text" value="nama saya" id="nama_saya">
+
+    <script>
+        var img = document.getElementById('gambar');
+        img.width = 350;
+
+        // menambahkan class lebih dari satu dalam 1 baris
+        img.className += ' merah hitam';
+
+        var input = document.getElementById('nama_saya');
+        input.value = "kenapa kamu tanya begitu?";
+
+        input.style.border = '2px solid blue';
+        input.style.backgroundColor = 'orange';
+
+        //---------Event-------
+        // cara pertama - menuliskan langsung di tag HTML
+        function berubah(){
+            img.style.backgroundColor = 'yellow';
+        };
+
+
+
+        // cara kedua - menuliskan event di script JS
+        input.onclick = function(){ berubah2() };
+        function berubah2(){
+            input.style.backgroundColor = 'blue';
+        };
+
+
+        
+        // cara ketiga - menuliskan lebih umum (dengan addEventListerner)
+        input.addEventListener('mouseleave', function(){
+            berubah3()
+        });
+        
+        function berubah3(){
+            input.style.backgroundColor = 'aqua';
+        };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Event di JS DOM</title>
+    <style>
+        .merah{
+            background: rgb(245, 65, 65);
+        }
+        .hitam{
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event JS DOM</h1>
+    <img onclick="berubah()" src="muehehe2.png" width="200" id="gambar" >
+
+    <input type="text" value="nama saya" id="nama_saya">
+    <input type="submit" id="submit">
+    Namanya adalah <span id="span1"></span>
+
+    <script>
+        var img = document.getElementById('gambar');
+        img.width = 350;
+
+
+        img.className += ' merah hitam';
+
+        var input = document.getElementById('nama_saya');
+        input.value = "kenapa kamu tanya begitu?";
+
+        input.style.border = '2px solid blue';
+
+
+        //---------Event-------
+        // event di Script
+        function berubah(){
+            input.style.backgroundColor = 'aqua';
+        }
+
+        input.addEventListener('mouseenter', berubah);
+
+        
+
+        // event di addEventListener
+        input.addEventListener('mouseleave', function(){
+            input.style.backgroundColor = 'yellow';
+        });
+
+
+        var submit = document.getElementById('submit');
+        var span = document.getElementById('span1');
+
+        submit.onclick = function(){
+            var text = input.value;
+            span.innerHTML = text;
+        };
+
+
+    </script>
+</body>
+</html>

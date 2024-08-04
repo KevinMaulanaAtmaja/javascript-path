@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM JS</title>
+</head>
+<body>
+    <h1>Belajar DOM JavaScript</h1>
+
+    <div id="box1"></div>
+
+    <div class="boxes"></div>
+    <div class="boxes"></div>
+    <div class="boxes"></div>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <div></div>
+    </ul>
+
+    <!-- error/repair -->
+    <form >
+        Choose your favorite subject:
+        <input name="subject" type="radio" value="HTML">HTML</input>
+        <input name="subject" type="radio" value="CSS">CSS</input>
+    </form> 
+
+    <script>
+        // selektor
+        //id
+        document.getElementById('box1').innerHTML = "Versi Lama";
+
+        // class
+        document.getElementsByClassName('boxes')[0].innerHTML = "Versi DOM";
+        // disimpan di dalam var
+        var kotak = document.getElementsByClassName('boxes');
+        
+        kotak[1].innerHTML = "Kotak ke 1";
+        kotak[2].innerHTML = "Kotak ke 2";
+
+        
+        // tag
+        document.getElementsByTagName('li')[0].innerHTML = "PHP";
+
+        // error // name
+        // document.getElementsByName("subject")[1].innerHTML = "JS";
+
+        // repair
+        var el = document.getElementsByName("subject")[0].innerHTML="JS";
+        console.log(el);
+        
+        // selektor luar biasa 
+        document.querySelectorAll('#box1')[0].innerHTML = "query selektor dg id"
+        document.querySelectorAll('.boxes')[0].innerHTML = "query selektor dg class"
+        document.querySelectorAll('ul div')[0].innerHTML = "query selektor dg traversing"
+
+
+    </script>
+</body>
+</html>

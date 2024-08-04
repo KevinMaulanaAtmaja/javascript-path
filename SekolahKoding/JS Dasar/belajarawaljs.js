@@ -39,9 +39,9 @@
   //increment ++ //decrement --
   var angka3 = 101;
   var angka4 = 10;
-  angka_baru--;
 
   var angka_baru = angka3 + angka4;
+  angka_baru--;
 
   //penulisan singkat
   var angka5 = 100;

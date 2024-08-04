@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM JS</title>
+    <style>
+        .merah{
+            background: rgb(245, 65, 65);
+        }
+        .hitam{
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attribute</h1>
+    <img src="muehehe2.png" width="200" id="gambar" >
+
+    <input type="text" value="nama saya" id="nama_saya">
+
+    <script>
+        var img = document.getElementById('gambar');
+        img.width = 350;
+
+        // set atribut baru
+        // img.setAttribute('class', 'merah');
+
+        // menambahkan class lebih dari satu dalam 1 baris
+        img.className += ' merah hitam';
+
+        var input = document.getElementById('nama_saya');
+        input.value = "kenapa kamu tanya bgtu?";
+
+        input.style.border = '2px solid blue';
+        input.style.backgroundColor = 'aqua';
+
+    </script>
+
+
+
+</body>
+</html>
