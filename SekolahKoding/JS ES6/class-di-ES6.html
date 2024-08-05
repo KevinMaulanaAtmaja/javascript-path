@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Class di ES6</h1>
+    <script>
+        class Jenderal {
+            constructor(nama, umur, pangkat){
+                this.nama = nama;
+                this.umur = umur;
+                this.pangkat = pangkat;
+            }
+            getPangkat(pangkat) {
+                return `namanya ${this.nama} berumur ${this.umur} pangkatnya adalah ${this.pangkat}`
+            }
+
+            static killed(){
+                return `dia sudah kill kurang lebih 500 rb - 1 jt orang`;
+            }
+        }  
+
+        let jenderal = new Jenderal('Soeharto', 30, 'JendBes');
+        console.log(jenderal.getPangkat());
+        console.log(Jenderal.killed());
+    </script>
+</body>
+</html>

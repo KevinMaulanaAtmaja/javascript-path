@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Promise di ES6</h1>
+    <script>
+        let member = new Promise(( resolve, reject) => {
+        if (true) {
+            resolve('berhasil')
+        } else {
+            reject('gagal')
+        }
+    }).then((pesan) => {
+        console.log('ini pesan then ' + pesan)
+    }).catch((pesan1) => {
+        console.log('ini pesan catch ' + pesan1)
+    })
+    console.log(member);
+    </script>
+</body>
+</html>

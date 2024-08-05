@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Variabel</title>
+</head>
+<body>
+    <h1>Variabel var, let & conts</h1>
+    <script>
+      //--------var let & conts-------
+
+        // function scope (var)
+        var nama = "kevin";
+        var nama = "amel";
+        console.log(nama);
+
+
+        // block scope (let)
+        // scope 1
+        let nama1 = "kevin";
+    {
+        // scope 2
+        let nama1 = "dina";
+        console.log(nama1);
+    }
+        console.log(nama1);
+
+
+        // block scope (const)
+        const person = {
+            id : 1,
+            nama : "rafa"
+        };
+
+        person.id = 2;
+        console.log(person);
+    </script>
+    </body>
+    </html>

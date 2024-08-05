@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Rest & Spread</h1>
+    <script>
+    // signIn = (username, pw, umur) => {
+    //     console.log(username + ' punya pw ' + pw + ' umurnya ' + umur);
+    // }
+
+    // rest parameter
+    let signIn = (...member) => {
+        console.log(member);
+    }
+
+    let data = ['kevin', '123', '16']
+    // username = 'kevin';
+    // pw = 123;
+    // umur = '16';
+
+    // spread operator
+    signIn(...data)
+    // signIn(username, pw, umur);
+
+    </script>
+    </body>
+    </html>

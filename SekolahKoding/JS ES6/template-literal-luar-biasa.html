@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Variabel</title>
+</head>
+
+<body>
+    <h1>template literal</h1>
+    <script>
+        // 1
+        let username = 'dina';
+        let umur = 14;
+
+        let text = `dek ${username} umurnya  ${umur}`
+        console.log(text);
+        
+        // 2
+        let div = `
+        <div> isi tag div </div>
+        <p> isi tag p </p>
+        `
+        console.log(div);
+
+        test = (strings, username, umur) => {
+            let string1 = strings[0];
+            let string2 = strings[1];
+            console.log(string1, username, string2, umur)
+        }
+
+        // 3
+        let output = test`nama dia adalah ${username} umurnya ${umur}`
+
+    
+    </script>
+</body>
+
+</html>

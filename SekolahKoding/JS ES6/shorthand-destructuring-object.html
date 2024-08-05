@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Shorthand & Destructuring Object</h1>
+    <script>
+        // shorthand
+        nama = 'amel';
+        umur = 3;
+        getData = ()=> {
+            return `adik saya bernama ${nama} umurya ${umur}`
+        }
+
+        // dari
+        // let adik = {
+        //     nama : nama,
+        //     umur: umur,
+        //     getData : getData
+        // }
+
+        // menjadi
+        let adik = {
+            nama, umur, getData
+        }
+
+        console.log(adik.getData());
+        
+
+        // destructuring Object
+        // Object
+        let akun_adik = {
+            username : 'dina',
+            pw : 123
+        }
+
+        let {username, pw} = akun_adik
+        console.log(akun_adik);
+
+        // Array
+        let umurKita = [3, 14, 16];
+        let[a,b,c] = umurKita;
+        console.log(a+b+c);
+
+    </script>
+</body>
+</html>

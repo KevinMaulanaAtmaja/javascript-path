@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Syntax Arrow Function</title>
+</head>
+<body>
+    <h1>Syntax Arrow Function</h1>
+    <script>
+// syntax arrow function => 
+
+// jika hanya 1 argumen
+// sebelumnya
+
+// let shrto = function(pangkat){
+//     return pangkat;
+// }
+
+// menjadi
+let shrto = pangkat => pangkat; 
+console.log("jenderal besar");
+
+
+
+// lebih dari satu argumen/parameter
+// sebelumnya
+
+// let nasution = function(pamgkat, umur){
+//     return pangkat, umur;
+// }
+
+// menjadi
+let nasution = (pangkat,umur) => pangkat,umur;
+console.table("jenderal",30);
+
+
+
+//jika tanpa argumen
+// sebelumnya
+
+// let SBY = function (){
+//     return "halo";  
+// }
+
+// menjadi
+let SBY = () => "halo Hambalang";
+console.log(SBY());
+
+
+
+// fungsi this di arrowFunc
+// sebelumnya
+let Jkwi = function(){
+    this.nama = "jokowi";
+    this.sayHello = function() {
+        console.log('halo, beliau adalah ' + this.nama);
+    }
+}
+
+// menjadi
+// let Jkwi = function(){
+//     this.nama = "jokowi"
+//     this.sayHello = ()  => {
+//         console.log('halo, beliau adalah ' + this.nama);
+//     }
+// }
+let jokowi = new Jkwi();
+jokowi.sayHello(); 
+
+</script>
+</body>
+</html>
