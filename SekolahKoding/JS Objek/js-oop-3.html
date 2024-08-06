@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS OOP</title>
+</head>
+<body>
+    <h1>JS OOP 3</h1>
+
+    <h1>Programmer</h1>    
+    <div id="data_lengkap"></div>
+    <div id="data_lengkap2"></div>
+    <div id="data_lengkap3"></div>
+
+
+    <script>
+        var programmer = {
+            nama : "kevin",
+            umur : 16,
+            setData : function(name, age){
+                this.nama = name;
+                this.umur = age;
+            }
+        };
+
+        var desainer = programmer;
+        desainer.nama = "Amelia";
+        desainer.umur = 3;
+
+        // designer
+        document.getElementById("data_lengkap").innerHTML = desainer.nama;
+        document.getElementById("data_lengkap2").innerHTML = desainer.umur;
+
+        // programmer
+        document.getElementById("data_lengkap3").innerHTML = programmer.nama;
+    </script>
+</body>
+</html>

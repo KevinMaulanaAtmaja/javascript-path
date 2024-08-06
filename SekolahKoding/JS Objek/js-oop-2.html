@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS OOP</title>
+</head>
+<body>
+    <h1>JS OOP 2</h1>
+
+    <h1>Pemain Bola</h1>    
+    <div id="player1"></div>
+    <div id="player2"></div>
+    <div id="negara_plyr"></div>
+
+
+    <script>
+        // objek prototype
+        function pemain_bola(name_plyr, age_plyr){
+            this.nama = name_plyr;
+            this.umur = age_plyr;
+        }
+
+        pemain_bola.prototype.negara = "Argentina";
+
+        var messi = new pemain_bola("Ankara Messi", 35);
+        var ronaldo = new pemain_bola("Cristiano Ronaldo", 35);
+
+        document.getElementById("player1").innerHTML = messi.nama;
+        document.getElementById("player2").innerHTML = ronaldo.nama;
+        document.getElementById("negara_plyr").innerHTML = messi.negara;
+    </script>
+</body>
+</html>
