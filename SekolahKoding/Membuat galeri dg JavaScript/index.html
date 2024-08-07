@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Galeri JavaScript</title>
+    </head>
+    <body>
+        <h1>Galeri JavaScript</h1>
+
+        <img src="gambar/img0.jpg" width="300" height="300" id="gambar" />
+        <br />
+        <div id="caption">Kevin</div>
+
+        <br />
+        <a href="#" onclick="sebelum()">Sebelum</a>
+        <!-- <button onclick="sebelum()">Sebelum</button> -->
+
+        <a href="#" onclick="ganti(0)">0</a>
+        <a href="#" onclick="ganti(1)">1</a>
+        <a href="#" onclick="ganti(2)">2</a>
+        <a href="#" onclick="ganti(3)">3</a>
+        <a href="#" onclick="ganti(4)">4</a>
+        <a href="#" onclick="ganti(5)">5</a>
+
+        <a href="#" onclick="sesudah()">Sesudah</a>
+        <!-- <button onclick="sesudah()">Sesudah</button> -->
+
+        <script>
+            var nomor = 0;
+            var caption = document.getElementById("caption");
+            var text = ["Kevin", "Amel", "Dina", "Rafa", "Bayu", "Khanza"];
+
+            function ganti(angka) {
+                nomor = angka;
+                ganti_gambar(angka);
+            }
+
+            function sebelum() {
+                //  harus tau nomor yg sedang aktif
+                nomor = nomor - 1;
+
+                if (nomor < 0) {
+                    nomor = 5;
+                }
+                ganti_gambar(nomor);
+            }
+
+            function sesudah() {
+                //  harus tau nomor yg sedang aktif
+                nomor = nomor + 1;
+
+                if (nomor > 5) {
+                    nomor = 0;
+                }
+                ganti_gambar(nomor);
+            }
+
+            // refactor
+            function ganti_gambar(angka) {
+                var lokasi = "gambar/img" + angka + ".jpg";
+                document.getElementById("gambar").src = lokasi;
+                caption.innerHTML = text[angka];
+                return false;
+            }
+        </script>
+    </body>
+</html>
