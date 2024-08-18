@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Dom Manipulation</title>
+        <style>
+            * {
+                border: 2px solid #dedede;
+                padding: 15px;
+                margin: 15px;
+            }
+            html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                max-width: 600px;
+                margin: 30px auto;
+                font-family: sans-serif;
+                color: #333;
+            }
+            .birumuda {
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="judul">Hello World</h1>
+        <div id="container">
+            <section id="a">
+                <p class="p1">paragraf 1</p>
+                <a href="http://instagram.com/sandhikagalih">Instagram Sandhika Galih</a>
+                <p class="p2">paragraf 2</p>
+                <p class="p3">paragraf 3</p>
+            </section>
+            <section id="b">
+                <p>paragraf 4</p>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ul>
+            </section>
+        </div>
+
+        <script>
+            // DOM manipulation
+            // innerHTML
+            const judul = document.getElementById("judul");
+            judul.innerHTML = "<em>Kevin</em>";
+
+            // const sectionA = document.querySelector("section#a");
+            // sectionA.innerHTML = "hello world!";
+
+            // style.<propertyCSS>
+            judul.style.color = "royalblue";
+            judul.style.backgroundColor = "salmon";
+
+            // setAttribute()
+            const link = document.querySelector("a");
+            link.setAttribute("target", "_blank");
+            const getLink = link.getAttribute("href");
+            // console.log(getLink);
+            // link.removeAttribute("target");
+
+            const p2 = document.querySelector(".p2");
+            // p2.setAttribute("class", "label");
+
+            // classList()
+            p2.classList.add("satu");
+            p2.classList.add("dua");
+            p2.classList.add("tiga");
+            p2.classList.add("empat");
+
+            // p2.classList.remove("dua");
+            document.body.classList.toggle("birumuda");
+            const item = p2.classList.item(2);
+            console.log(item);
+
+            const contains = p2.classList.contains("tiga");
+            console.log(contains);
+            p2.classList.replace("empat", "lima");
+        </script>
+    </body>
+</html>

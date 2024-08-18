@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Dom Event</title>
+        <style>
+            * {
+                border: 2px solid #dedede;
+                padding: 15px;
+                margin: 15px;
+            }
+            html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                max-width: 600px;
+                margin: 30px auto;
+                font-family: sans-serif;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="judul">Hello World</h1>
+        <div id="container">
+            <section id="a">
+                <p class="p1">paragraf 1</p>
+                <a href="http://instagram.com/sandhikagalih">Instagram Sandhika Galih</a>
+                <!-- Inline HTML attr -->
+                <p class="p2" onclick="alert('Inline Event')">paragraf 2</p>
+                <p class="p3">paragraf 3</p>
+            </section>
+            <section id="b">
+                <p>paragraf 4</p>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ul>
+            </section>
+        </div>
+
+        <script>
+            // event ref
+            // https://developer.mozilla.org/en-US/docs/Web/Events
+
+            // event handler
+            // Inline HTML attr -> ada di paragraf 2
+            // ELement method -> paragraf 3
+            const p3 = document.querySelector(".p3");
+            function ubahWarna() {
+                p3.style.backgroundColor = "lightblue";
+            }
+            p3.onclick = ubahWarna;
+
+            // addEventListener() -> paragraf 4
+            const p4 = document.querySelector("section#b p");
+            p4.addEventListener("click", function () {
+                // alert("addEventListener()");
+                const ul = document.querySelector("section#b ul");
+                const liBaru = document.createElement("li");
+                const teksLiBaru = document.createTextNode("item baru");
+
+                liBaru.appendChild(teksLiBaru);
+                ul.appendChild(liBaru);
+            });
+
+            // perbedaan ELement method & addEventListener
+            const firstLi = document.querySelector("section#b ul li:first-child");
+            const lastLi = document.querySelector("section#b ul li:last-child");
+            // event yg ditimpa akan diambil yg paling baru
+            firstLi.onclick = function () {
+                firstLi.style.backgroundColor = "lightblue";
+            };
+            firstLi.onclick = function () {
+                firstLi.style.color = "red";
+            };
+
+            lastLi.addEventListener("click", function () {
+                lastLi.style.backgroundColor = "lightgreen";
+            });
+            lastLi.addEventListener("click", function () {
+                lastLi.style.color = "red";
+            });
+        </script>
+    </body>
+</html>

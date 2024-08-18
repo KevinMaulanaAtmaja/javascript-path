@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Dom Manipulation2</title>
+        <style>
+            * {
+                border: 2px solid #dedede;
+                padding: 15px;
+                margin: 15px;
+            }
+            html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                max-width: 600px;
+                margin: 30px auto;
+                font-family: sans-serif;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="judul">Hello World</h1>
+        <div id="container">
+            <section id="a">
+                <p class="p1">paragraf 1</p>
+                <a href="http://instagram.com/sandhikagalih">Instagram Sandhika Galih</a>
+                <p class="p2">paragraf 2</p>
+                <p class="p3">paragraf 3</p>
+            </section>
+            <section id="b">
+                <p>paragraf 4</p>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ul>
+            </section>
+        </div>
+
+        <script>
+            // DOM manipulation2
+            // buat element baru
+            // 1. "Paragraf Baru"
+            // createElement()
+            const pBaru = document.createElement("p");
+            // createTextNode()
+            const teksBaru = document.createTextNode("Paragraf Baru");
+
+            // simpan tulisan ke paragraf
+            // appendChild()
+            pBaru.appendChild(teksBaru);
+
+            // simpan pBaru di akhir Section A
+            const sectionA = document.getElementById("a");
+            sectionA.appendChild(pBaru);
+
+            // 2. "Item Baru"
+            const liBaru = document.createElement("li");
+            const teksLiBaru = document.createTextNode("Item Baru");
+            liBaru.appendChild(teksLiBaru);
+
+            const ul = document.querySelector("section#b ul");
+            const li2 = ul.querySelector("li:nth-child(2)");
+
+            // insertBefore(elBaru, sblumElement)
+            ul.insertBefore(liBaru, li2);
+
+            const link = document.getElementsByTagName("a")[0];
+            // removeChild()
+            sectionA.removeChild(link);
+
+            // 3. "Judul Baru"
+            const sectionB = document.getElementById("b");
+            const p4 = sectionB.querySelector("p");
+
+            const h2Baru = document.createElement("h2");
+            const teksH2Baru = document.createTextNode("Judul Baru!");
+            h2Baru.appendChild(teksH2Baru);
+            console.log(h2Baru);
+
+            // replaceChild(nodeBaru,nodeLama)
+            sectionB.replaceChild(h2Baru, p4);
+
+            pBaru.style.backgroundColor = "lightgreen";
+            liBaru.style.backgroundColor = "lightgreen";
+            h2Baru.style.backgroundColor = "lightgreen";
+
+            // method baru
+            // https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+            // parentNode.append()
+            // parentNode.prepend()
+            // childNode.before()
+            // childNode.after()
+            // childNode.remove()
+            // childNode.replaceWith()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+body {
+    background-color: lightblue;
+    /* text-align: center; */
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    border: 5px solid black;
+    overflow: auto;
+}
+
+.hero-img{
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+
+.thumb{
+    width: 25%;
+    border: 2px solid white;
+    margin-top: 10px;
+}
+.thumbnail{
+    max-width: 100%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.thumb:hover{
+    opacity: .5;
+    cursor: pointer;
+    /* transition: 1s; */
+}
+
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+
+    }
+}
+
+.fade{
+    opacity: 0;
+    animation: fadeIn .5s forwards ease-in-out;
+}
+
+.active{
+    opacity: .5;
+}
